@@ -23,9 +23,9 @@
    <widget class="QLabel" name="header1">
     <property name="geometry">
      <rect>
-      <x>460</x>
+      <x>440</x>
       <y>10</y>
-      <width>391</width>
+      <width>421</width>
       <height>61</height>
      </rect>
     </property>
@@ -77,7 +77,7 @@
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-image: url(panelWide.png);</string>
+       <string notr="true">background-image: url(Images/panelWide.png);</string>
       </property>
       <property name="text">
        <string/>
@@ -97,9 +97,9 @@
       <property name="geometry">
        <rect>
         <x>119</x>
-        <y>139</y>
-        <width>91</width>
-        <height>111</height>
+        <y>149</y>
+        <width>81</width>
+        <height>101</height>
        </rect>
       </property>
      </widget>

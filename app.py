@@ -1,5 +1,6 @@
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QMessageBox, QFileDialog
+from PyQt5.QtCore import QThread
 from untitled import Ui_MainWindow
 import sys
 
@@ -11,7 +12,17 @@ class HyperloopUI(QtWidgets.QMainWindow):
         self.ui.setupUi(self)
         
         # self.ui.win0 = Panel.py
-
+        
+        self.autoStarter()
+        
+        
+    # def autoStarter(QThread):
+    #     pass
+    #     # this func will start the loop automatically
+    
+    # def startWorker(QThread):
+    #     print("Worker dejected")
+        
 def HyperloopUIWindow():
     HyperloopUIWindow = QtWidgets.QApplication(sys.argv)
     win = HyperloopUI()
