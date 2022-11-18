@@ -6,3 +6,4 @@ Hız ibresi: 183px genişlik, 21px uzunluk
 
 Panel arkaplan: 1073px genişlik, 766px uzunluk
 Not: panel ekranının altında boşluk olması gerekiyor çünkü diğer haliyle program orayı doldurmak için otomatik olarak görseli yineliyor.
+	 eğer mümkünse görsel alt tarafa kadar uyumlu olarak uzatılabilir.
