@@ -1,4 +1,4 @@
-from PyQt5 import QtCore, QtGui, QtWidgets, Qt
+from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import QSize
 import os
 
@@ -57,3 +57,4 @@ class BatteryWidget(QtWidgets.QWidget):
         label.setStyleSheet("background-color: rgba(0, 0, 0, 0);")
         
         QtWidgets.QVBoxLayout(self).addWidget(label)
+        

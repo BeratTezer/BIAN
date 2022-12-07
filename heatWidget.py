@@ -1,5 +1,4 @@
-from PyQt5 import QtCore, QtGui, QtWidgets, Qt
-from PyQt5.QtCore import QSize
+from PyQt5 import QtCore, QtGui, QtWidgets
 import os
 
 class Heat(QtWidgets.QLabel):

@@ -976,9 +976,28 @@
                 <height>101</height>
                </rect>
               </property>
+              <property name="focusPolicy">
+               <enum>Qt::NoFocus</enum>
+              </property>
               <property name="styleSheet">
                <string notr="true"/>
               </property>
+              <widget class="QPushButton" name="widget_2_button">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>75</width>
+                 <height>101</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
              </widget>
              <widget class="HeatWidget" name="widget_4" native="true">
               <property name="geometry">
@@ -992,6 +1011,22 @@
               <property name="styleSheet">
                <string notr="true"/>
               </property>
+              <widget class="QPushButton" name="widget_4_button">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>81</width>
+                 <height>121</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
              </widget>
             </widget>
             <widget class="QWidget" name="checks">
@@ -1311,6 +1346,46 @@
         </widget>
        </item>
        <item>
+        <layout class="QHBoxLayout" name="footer_center_frame">
+         <item>
+          <layout class="QHBoxLayout" name="footer_center_spacer">
+           <item>
+            <widget class="QLabel" name="space_lbl">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QPushButton" name="return_to_panel">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string>Panele Dön</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>Images/whiteIcons/bookmark.svg</normaloff>Images/whiteIcons/bookmark.svg</iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="footer_center_spacer2">
+           <item>
+            <widget class="QLabel" name="spacer_lbl">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
         <widget class="QFrame" name="footer_left_frame">
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
@@ -1359,7 +1434,7 @@
          </layout>
         </widget>
        </item>
-       <item alignment="Qt::AlignBottom">
+       <item>
         <widget class="QFrame" name="size_grip">
          <property name="minimumSize">
           <size>

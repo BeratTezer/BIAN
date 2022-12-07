@@ -1,5 +1,4 @@
-from PyQt5.QtWidgets import QGraphicsDropShadowEffect, QSizeGrip
-from PyQt5.QtCore import QPropertyAnimation, QPoint
+from PyQt5.QtCore import QPropertyAnimation
 from PyQt5 import QtGui, QtCore, QtWidgets
 from qt_material import *
 from modernUI import *
@@ -41,42 +40,57 @@ class Hyperloop(QtWidgets.QMainWindow):
         # Başlangıçta panel butonunu tıklanmış olarak gösterir
         self.ui.menuButton_panel.setStyleSheet("background-color: rgb(31, 37, 48);\nborder-radius: 50;")
         
+        # Panele Dön saklı olarak başlar
+        self.ui.return_to_panel.setHidden(True)
+        
         # Sol tarafta yer alan sembollere işlev kazandırır
         self.ui.menuButton_panel.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.panel))
         self.ui.menuButton_panel.clicked.connect(lambda: self.defaultBackground(self.ui.menuButton_panel))
+        self.ui.menuButton_panel.clicked.connect(lambda: self.panelReturner_controller())
         
         self.ui.menuButton_checks.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.checks))
         self.ui.menuButton_checks.clicked.connect(lambda: self.defaultBackground(self.ui.menuButton_checks))
+        self.ui.menuButton_checks.clicked.connect(lambda: self.panelReturner_controller())
         
         self.ui.menuButton_telem.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.telem))
         self.ui.menuButton_telem.clicked.connect(lambda: self.defaultBackground(self.ui.menuButton_telem))
+        self.ui.menuButton_telem.clicked.connect(lambda: self.panelReturner_controller())
         
         self.ui.menuButton_connection.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.connection))
         self.ui.menuButton_connection.clicked.connect(lambda: self.defaultBackground(self.ui.menuButton_connection))
+        self.ui.menuButton_connection.clicked.connect(lambda: self.panelReturner_controller())
         
         self.ui.menuButton_test.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.test))
         self.ui.menuButton_test.clicked.connect(lambda: self.defaultBackground(self.ui.menuButton_test))
+        self.ui.menuButton_test.clicked.connect(lambda: self.panelReturner_controller())
         
         self.ui.menuButton_health.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.health))
         self.ui.menuButton_health.clicked.connect(lambda: self.defaultBackground(self.ui.menuButton_health))
+        self.ui.menuButton_health.clicked.connect(lambda: self.panelReturner_controller())
         
         self.ui.menuButton_stability.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.stability))
         self.ui.menuButton_stability.clicked.connect(lambda: self.defaultBackground(self.ui.menuButton_stability))
+        self.ui.menuButton_stability.clicked.connect(lambda: self.panelReturner_controller())
         
         self.ui.menuButton_breaks.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.breaks))
         self.ui.menuButton_breaks.clicked.connect(lambda: self.defaultBackground(self.ui.menuButton_breaks))
+        self.ui.menuButton_breaks.clicked.connect(lambda: self.panelReturner_controller())
         
         self.ui.menuButton_engine.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.engine))
         self.ui.menuButton_engine.clicked.connect(lambda: self.defaultBackground(self.ui.menuButton_engine))
+        self.ui.menuButton_engine.clicked.connect(lambda: self.panelReturner_controller())
         
         self.ui.menuButton_energy.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.energy))
         self.ui.menuButton_energy.clicked.connect(lambda: self.defaultBackground(self.ui.menuButton_energy))
+        self.ui.menuButton_energy.clicked.connect(lambda: self.panelReturner_controller())
         
         self.ui.menuButton_plots.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.plots))
         self.ui.menuButton_plots.clicked.connect(lambda: self.defaultBackground(self.ui.menuButton_plots))
+        self.ui.menuButton_plots.clicked.connect(lambda: self.panelReturner_controller())
         
         self.ui.menuButton_configs.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.configs))
         self.ui.menuButton_configs.clicked.connect(lambda: self.defaultBackground(self.ui.menuButton_configs))
+        self.ui.menuButton_configs.clicked.connect(lambda: self.panelReturner_controller())
         
         # Pencereyi hareket ettirme işlevi sağlayan fonksiyon
         def moveWindow(e):
@@ -92,6 +106,23 @@ class Hyperloop(QtWidgets.QMainWindow):
         # Solda yer alan menünün üzerindeki butonun fonksiyon ile bağlantısı
         self.ui.menu_header_button.clicked.connect(lambda: self.slideLeftMenu())
         
+        # Resimlere tıklandığında ilgili sekmesine geçiş fonksiyonunu çalıştırır - olmazsa transparan butonla yapacağım
+        self.ui.widget_2_button.setStyleSheet("background-color: rgba(0, 0, 0, 0);") # batarya
+        self.ui.widget_2_button.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.energy))
+        self.ui.widget_2_button.clicked.connect(lambda: self.defaultBackground(self.ui.menuButton_energy))
+        self.ui.widget_2_button.clicked.connect(lambda: self.panelReturner_controller())
+        
+        self.ui.widget_4_button.setStyleSheet("background-color: rgba(0, 0, 0, 0);") # sıcaklık
+        self.ui.widget_4_button.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.stability))
+        self.ui.widget_4_button.clicked.connect(lambda: self.defaultBackground(self.ui.menuButton_stability))
+        self.ui.widget_4_button.clicked.connect(lambda: self.panelReturner_controller())
+        
+        # Panele Dönme fonskiyonu ile buton bağlantısı
+        self.ui.return_to_panel.clicked.connect(lambda: self.panelReturner())
+        
+        # Panele Dön arkaplan ayarları
+        self.ui.return_to_panel.setStyleSheet("background-color: rgba(0, 0, 0, 0);")
+                
     # Seçili pencerenin ait olduğu sembol butonunu belirtmeye yarayan fonksiyon
     def defaultBackground(self, widget):
         self.ui.menuButton_panel.setStyleSheet("border: none;")
@@ -109,7 +140,6 @@ class Hyperloop(QtWidgets.QMainWindow):
         
         widget.setStyleSheet("background-color: rgb(31, 37, 48);\nborder-radius: 50;")
         
-        
     # Solda yer alan menünün açılıp kapanma işlevini sağlayan fonksiyon
     def slideLeftMenu(self):
         width = self.ui.left_menu_cont_frame.width()
@@ -126,7 +156,27 @@ class Hyperloop(QtWidgets.QMainWindow):
         self.animation.setEndValue(newWidth)
         self.animation.setEasingCurve(QtCore.QEasingCurve.InOutQuart)
         self.animation.start()
-
+        
+    # Solda yer alan menünün resimlerle gezinme sırasında kapanmasını sağlar
+    
+    # Batarya sekmesine geçiş fonksiyonu
+    # def goToBatteryPage(self):
+    #     self.ui.stackedWidget.setCurrentWidget(self.ui.energy)
+    #     self.defaultBackground(self.ui.menuButton_energy)
+    
+    # Panel Döndürme Kontrol 
+    def panelReturner_controller(self):
+        if self.ui.stackedWidget.currentIndex() != 0:
+            self.ui.return_to_panel.setHidden(False)
+        else:
+            self.ui.return_to_panel.setHidden(True)
+    
+    # Panele Döndürme Fonksiyonu
+    def panelReturner(self):
+        self.ui.stackedWidget.setCurrentWidget(self.ui.panel)
+        self.defaultBackground(self.ui.menuButton_panel)
+        self.ui.return_to_panel.setHidden(True)
+        
     # Pencereyi hareket ettirme işlevi sağlayan fonksiyon 2
     def mousePressEvent(self, event):
         self.clickPosition = event.pos()
@@ -139,6 +189,7 @@ class Hyperloop(QtWidgets.QMainWindow):
         else:
             self.showMaximized()
             self.ui.restore_window_button.setIcon(QtGui.QIcon("Images/whiteIcons/credit-card.svg"))
+            
         
 def HyperloopWindow():
     HyperloopWindow = QtWidgets.QApplication(sys.argv)
