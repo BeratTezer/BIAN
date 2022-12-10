@@ -33,7 +33,7 @@
     <item>
      <widget class="QFrame" name="header_frame">
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(0, 0, 0);</string>
+       <string notr="true">background-color: rgb(36, 55, 76);</string>
       </property>
       <property name="frameShape">
        <enum>QFrame::NoFrame</enum>
@@ -319,7 +319,7 @@
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(0, 0, 0);</string>
+          <string notr="true">background-color: rgb(36, 55, 76);</string>
          </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
@@ -895,7 +895,7 @@
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(0, 0, 0);</string>
+          <string notr="true">background-color: rgb(31, 37, 48);</string>
          </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
@@ -1208,7 +1208,7 @@
        <item>
         <widget class="QFrame" name="right_frame">
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(0, 0, 0);</string>
+          <string notr="true">background-color: rgb(36, 55, 76);</string>
          </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
@@ -1308,7 +1308,7 @@
     <item alignment="Qt::AlignBottom">
      <widget class="QFrame" name="footer_frame">
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(0, 0, 0);</string>
+       <string notr="true">background-color: rgb(31, 37, 48);</string>
       </property>
       <property name="frameShape">
        <enum>QFrame::NoFrame</enum>

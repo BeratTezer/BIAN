@@ -158,12 +158,7 @@ class Hyperloop(QtWidgets.QMainWindow):
         self.animation.start()
         
     # Solda yer alan menünün resimlerle gezinme sırasında kapanmasını sağlar
-    
-    # Batarya sekmesine geçiş fonksiyonu
-    # def goToBatteryPage(self):
-    #     self.ui.stackedWidget.setCurrentWidget(self.ui.energy)
-    #     self.defaultBackground(self.ui.menuButton_energy)
-    
+        
     # Panel Döndürme Kontrol 
     def panelReturner_controller(self):
         if self.ui.stackedWidget.currentIndex() != 0:

@@ -33,7 +33,7 @@ class NeedleWidget(QtWidgets.QWidget):
     def __init__(self, parent=None):
         super(NeedleWidget, self).__init__(parent)
         label = Needle(alignment=QtCore.Qt.AlignCenter)
-        img_path = os.path.join(r'C:\Users\tezer\Masaüstü\ForTF\Images', 'panelNeedleThin.png')
+        img_path = os.path.join(r'C:\Users\tezer\Masaüstü\ForTF2\Images', 'Needle2.png')
         label.set_pixmap(QtGui.QPixmap(img_path))
         # button = QtWidgets.QPushButton('Rotate')
         # button.clicked.connect(label.start_animation)
