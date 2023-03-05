@@ -648,7 +648,7 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.menu_header_button.setText(_translate("MainWindow", "Menu"))
-        self.label_2.setText(_translate("MainWindow", "Atmo Sapphire Hyperloop"))
+        self.label_2.setText(_translate("MainWindow", "BIAN Hyperloop"))
         self.plots_button_label.setText(_translate("MainWindow", "Plots"))
         self.connection_button_label.setText(_translate("MainWindow", "Connection"))
         self.breaks_button_label.setText(_translate("MainWindow", "Breaks"))
