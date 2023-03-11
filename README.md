@@ -1,4 +1,4 @@
-# <p align="center"><img style="height: 50px; width: 50px" src="https://user-images.githubusercontent.com/64587561/222939665-4c5a15d9-e5ed-430b-9740-d6268037d873.png">&nbsp;&nbsp;&nbsp;GUI of the BIAN Hyperloop Teknofest Team&nbsp;&nbsp;&nbsp;<img style="height: 50px; width: 50px" src="https://user-images.githubusercontent.com/64587561/222937396-73d3cfae-3145-4c87-b1f0-71bd17d35abd.jpg"></p>
+# <p align="center"><img style="height: 50px; width: 50px" src="https://user-images.githubusercontent.com/64587561/222939665-4c5a15d9-e5ed-430b-9740-d6268037d873.png">&nbsp;&nbsp;&nbsp;GUI of BIAN Hyperloop Teknofest Team&nbsp;&nbsp;&nbsp;<img style="height: 50px; width: 50px" src="https://user-images.githubusercontent.com/64587561/222937396-73d3cfae-3145-4c87-b1f0-71bd17d35abd.jpg"></p>
 
 ### <p align="center"> Developed by<br><br><img style="width: 40px; height: 40px;" src="https://media.licdn.com/dms/image/D4D03AQF7rbffhdgT-Q/profile-displayphoto-shrink_800_800/0/1677828558607?e=1683763200&v=beta&t=7dTtmOaDBC5pW3_WiDy-Pumgje7Sge2YZ2DmQn1b86g" alt="Berat-Tezer"><br><a href="https://www.linkedin.com/in/berat-tezer/">Berat Tezer</a></p> <br>
  
